@@ -8,6 +8,7 @@ const routes = require('./routes')
 
 const { setupWebsocket } = require('./websocket');
 
+
 /*Vamos precisar do 'CORS' pra poder abilitar as opções de acesso a API de forma
 externa*/
 
@@ -16,7 +17,7 @@ const server = http.Server(app);
 
 setupWebsocket(server);
 
-mongoose.connect(MONGO_URL, {
+mongoose.connect("mongodb+srv://deployDev:admin@cluster0-shxn1.mongodb.net/week10?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
