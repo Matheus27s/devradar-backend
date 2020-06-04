@@ -28,4 +28,4 @@ app.use( express.json() );
 app.use(routes);
 
 //server.listen("170.247.29.206");
-server.listen("3333");
+server.listen(process.env.PORT || 3333);
